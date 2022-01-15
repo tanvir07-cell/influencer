@@ -1,0 +1,394 @@
+/* for google fonts: */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Rubik:ital,wght@0,500;1,700&display=swap");
+/* universal selector start:*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* universal selector start:*/
+
+/* utilities start: */
+html {
+  font-size: 62.5%;
+  /* in my case 1rem or 1em = 10px; */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding-top: 2rem;
+  color: #3a3a3a;
+}
+
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+
+  text-transform: uppercase;
+}
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.text--shadow {
+  animation: textShadow 1s ease-in-out infinite alternate;
+  -webkit-animation: textShadow 1s ease-in-out infinite alternate;
+  color: #743ad5;
+  font-size: 5rem;
+}
+/* text-animation */
+@keyframes textShadow {
+  0% {
+    text-shadow: 0 0 5px #00dcff, 0 0 10px #00dcff, 0 0 20px #00dcff,
+      0 0 40px #00dcff;
+  }
+  100% {
+    text-shadow: 0 0 5px #09889c, 0 0 10px #09889c, 0 0 20px #09889c,
+      0 0 40px #09889c;
+  }
+}
+
+/* journey__heading animation: */
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(2rem);
+    -webkit-transform: translateX(2rem);
+    -moz-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    -o-transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.section__title {
+  font-size: 2.8rem;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* utilities end: */
+
+/* navbar styles start : */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.nav__heading {
+  font-size: 2.4rem;
+  color: #3a3a3a;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__listItem {
+  list-style-type: none;
+}
+.nav__listItem i {
+  font-size: 2.4rem;
+  margin: 2rem;
+}
+.nav__btn:link,
+.nav__btn:visited {
+  margin: 2rem;
+  color: #3a3a3a;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.nav__btn:hover,
+.nav__btn:active,
+.active {
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-slice: 1;
+}
+.nav__listItem:last-child > i {
+  font-size: 2.4rem;
+}
+
+/* journey section: */
+
+.journey {
+  margin-bottom: 3rem;
+}
+
+.journey__info {
+  width: 58.2rem;
+  height: 27rem;
+}
+.journey__heading {
+  font-size: 5rem;
+  color: #3a3a3a;
+  animation: moveInLeft 1.5s ease-in-out;
+  -webkit-animation: moveInLeft 1.5s ease-in-out;
+}
+
+.journey__description {
+  font-size: 1.6rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+.journey__img {
+  width: 44rem;
+  height: 41.4rem;
+}
+.btn--purple {
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  color: #fff;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  animation: textShadow 1s ease-in-out infinite alternate;
+  -webkit-animation: textShadow 1s ease-in-out infinite alternate;
+  transition: animation 0.5s;
+  -webkit-transition: animation 0.5s;
+  -moz-transition: animation 0.5s;
+  -ms-transition: animation 0.5s;
+  -o-transition: animation 0.5s;
+}
+
+/* brand section style start: */
+.testimonials {
+  justify-content: center;
+}
+
+.testimonials > div {
+  filter: blur(0.15rem);
+  -webkit-filter: blur(0.15rem);
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #ccc;
+}
+/* brand section style end: */
+
+/* popular section style start: */
+.popular {
+  margin-top: 5rem;
+}
+.popular__heading {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #3a3a3a;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 3.5rem;
+}
+
+.collection {
+  width: 30rem;
+  height: 45rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+.collection:hover {
+  transform: scale(1.05);
+  border: 5px solid transparent;
+  background: linear-gradient(to left, #ccc, #ccc) padding-box,
+    linear-gradient(to left, #743ad5, #d53a9d) border-box;
+  border-image-slice: 1;
+  border-radius: 10px;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  overflow: hidden;
+}
+.collection div:not(:first-child) {
+  padding: 1rem 2rem 0;
+}
+
+.collection__price {
+  font-size: 2.4rem;
+}
+
+.collection__img {
+  width: 30rem;
+  height: 25.6rem;
+}
+
+.collection__rating i {
+  color: orange;
+}
+.collection div:last-child p {
+  font-size: 1.4rem;
+}
+
+/* creative: */
+.creative {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+}
+
+.creative__banner {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.creative__heading {
+  text-align: center;
+  font-size: 3.8rem;
+}
+
+.creative__banner div:first-child {
+  background: rgba(0, 0, 0, 0.7) url("images/login.jpeg") no-repeat;
+  background-blend-mode: darken;
+  width: 65rem;
+  height: 40rem;
+
+  border-radius: 40px 0 0 40px;
+  -webkit-border-radius: 40px 0 0 40px;
+  -moz-border-radius: 40px 0 0 40px;
+  -ms-border-radius: 40px 0 0 40px;
+  -o-border-radius: 40px 0 0 40px;
+  position: relative;
+}
+
+.creative__banner div:first-child h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5) linear-gradient(to left, #743ad5, #d53a9d);
+  background-blend-mode: darken;
+  width: 400px;
+  height: 400px;
+  border-radius: 0px 40px 40px 0px;
+  -webkit-border-radius: 0px 40px 40px 0px;
+  -moz-border-radius: 0px 40px 40px 0px;
+  -ms-border-radius: 0px 40px 40px 0px;
+  -o-border-radius: 0px 40px 40px 0px;
+}
+
+.login form input {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  text-align: center;
+
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  width: 50%;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+button {
+  border-radius: 40px 0px 50px 0px;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  border: none;
+  width: 50%;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+  -webkit-border-radius: 40px 0px 50px 0px;
+  -moz-border-radius: 40px 0px 50px 0px;
+  -ms-border-radius: 40px 0px 50px 0px;
+  -o-border-radius: 40px 0px 50px 0px;
+  text-transform: uppercase;
+}
+
+/* footer */
+footer {
+  background: rgba(0, 0, 0, 0.5) linear-gradient(to left, #743ad5, #d53a9d);
+  padding: 2rem;
+  background-blend-mode: darken;
+  color: #fff;
+  text-align: center;
+}
+footer div:first-child {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+footer div:nth-child(2),
+span {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  font-size: 3.2rem;
+}

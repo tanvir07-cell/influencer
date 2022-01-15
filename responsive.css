@@ -1,0 +1,84 @@
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media only screen and (max-width: 34em) {
+  /* 34em = 34*16 = 544px */
+  header {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .journey {
+    margin-top: 4rem;
+  }
+  .journey div:nth-child(2) {
+    margin-top: -5rem;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+  }
+  .journey__info {
+    width: 50%;
+  }
+  .journey__img {
+    width: 16rem;
+    height: 16rem;
+  }
+  .journey__heading {
+    font-size: 1.75rem;
+    width: 25.25rem;
+  }
+  .journey__description {
+    font-size: 0.875rem;
+    width: 25rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .text--shadow {
+    font-size: 1.5rem;
+    position: relative;
+    left: 25%;
+  }
+  .btn--purple {
+    margin-left: 1.5rem;
+  }
+
+  /* collections: */
+  .collections {
+    grid-template-columns: repeat(1, 1fr);
+    width: 65%;
+  }
+
+  /* creative: */
+
+  .creative__banner div:first-child {
+    width: 30%;
+
+    width: 200px;
+    height: 200px;
+    font-size: 1rem;
+  }
+  .creative__banner div:first-child .section__title {
+    font-size: 1rem;
+  }
+  .creative__banner div:nth-child(2) {
+    width: 30%;
+    margin-right: 10rem;
+  }
+
+  .login form {
+    align-items: flex-start;
+    padding-left: 2rem;
+    width: 200px;
+    height: 200px;
+  }
+}
