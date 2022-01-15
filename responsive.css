@@ -4,6 +4,7 @@
 
 @media only screen and (max-width: 34em) {
   /* 34em = 34*16 = 544px */
+
   header {
     display: none;
   }
@@ -11,23 +12,24 @@
   .container {
     width: 100%;
   }
-  ::-webkit-scrollbar {
-    display: none;
-    overflow-x: hidden;
-  }
 
   .journey {
     margin-top: 4rem;
   }
   .journey div:nth-child(2) {
     margin-top: -5rem;
+    width: 100%;
+    position: relative;
+    left: 25%;
   }
 
   .flex-wrapper {
     flex-direction: column;
   }
   .journey__info {
-    width: 50%;
+    width: 100%;
+    position: relative;
+    left: 20%;
   }
   .journey__img {
     width: 16rem;
@@ -42,40 +44,51 @@
     width: 25rem;
     text-align: center;
     margin-top: 1rem;
+    margin-left: -3rem;
   }
   .text--shadow {
     font-size: 1.5rem;
     position: relative;
     left: 25%;
   }
+  .journey {
+    display: none;
+  }
 
   /* collections: */
   .collections {
     grid-template-columns: repeat(1, 1fr);
-    width: 75%;
+    width: 90%;
+  }
+  .collection {
+    margin: 0 auto;
+  }
+
+  .testimonials {
+    align-items: stretch;
+
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   /* creative: */
 
+  .creative {
+    margin: 5rem auto;
+    width: 91%;
+  }
+  .creative__banner {
+    width: 100%;
+    margin: 0 auto;
+  }
   .creative__banner div:first-child {
-    width: 30%;
-
-    width: 200px;
-    height: 200px;
-    font-size: 1rem;
-  }
-  .creative__banner div:first-child .section__title {
-    font-size: 1rem;
-  }
-  .creative__banner div:nth-child(2) {
-    width: 30%;
-    margin-right: 10rem;
+    display: none;
   }
 
-  .login form {
-    align-items: flex-start;
-    padding-left: 2rem;
-    width: 200px;
-    height: 200px;
+  .creative__banner div:last-child {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 56.25rem) {
   }
 }
