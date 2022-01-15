@@ -48,14 +48,11 @@
     position: relative;
     left: 25%;
   }
-  .btn--purple {
-    margin-left: 1.5rem;
-  }
 
   /* collections: */
   .collections {
     grid-template-columns: repeat(1, 1fr);
-    width: 65%;
+    width: 75%;
   }
 
   /* creative: */
