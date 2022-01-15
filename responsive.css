@@ -82,7 +82,41 @@
   .creative__banner div:last-child {
     width: 100%;
   }
+}
 
-  @media only screen and (max-width: 56.25rem) {
+/* for tablet */
+@media only screen and (min-width: 34.0625rem) and (max-width: 62rem) {
+  /* removing menu when tablet seeing */
+  header {
+    display: none;
+  }
+  /* removing global scrollbar: */
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .journey {
+    width: 100%;
+  }
+  .journey__info {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .journey__img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .testimonials {
+    margin-top: 20rem;
+  }
+
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 2rem;
+  }
+
+  hr {
+    display: none;
   }
 }
